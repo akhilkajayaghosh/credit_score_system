@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Credit Score</title>
+    <link rel="stylesheet" href="static/page4.css">
+</head>
+<body>
+    <div class="container">
+        <div class="main">
+            <nav>
+                <a href="{{ url_for('index') }}">HOME</a>
+                <a href="{{ url_for('page2') }}">SCORE</a>
+                <a href="{{ url_for('page3') }}">CLASSIFICATION</a>
+                <a href="{{ url_for('page4') }}">LOAN PREDICATION</a>
+            </nav>
+        </div>
+        <div class="content">
+            <h1>CREDIT SCORE CALCULATION</h1>
+            <div class="content-box">
+                <div class="form">
+                    <form action="#" method="get" class="form">
+
+                        <div class="box">
+                            <h1>Gender</h1>
+                            <div class="line">
+                                <label for="Gender" class="radio">Select a Gender:</label>
+                                <div class="radio-box">
+                                    <input type="radio" class="radio-circle" id="Gender" name="gender">
+                                    <label class="radio" for="Gender">MALE</label>
+                                    <input type="radio" class="radio-circle" id="Gender" name="gender">
+                                    <label class="radio" for="Gender">FEMALE</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="box">
+                            <h1>Co-applicant</h1>
+                            <div class="line">
+                                <label for="co-applicant" class="radio">Do you have a co-applicant?</label>
+                                <div class="radio-box">
+                                    <input type="radio" class="radio-circle" id="co-applicant" name="co-applicant">
+                                    <label class="radio" for="co-applicant">YES</label>
+                                    <input type="radio" class="radio-circle" id="co-applicant" name="co-applicant">
+                                    <label class="radio" for="co-applicant">NO</label>
+                                </div>
+                            </div>
+                            <div class="line">
+                                <label for="Age">Age:</label>
+                                <input type="text" class="input" placeholder="Enter your age" id="Age">
+                            </div>
+                            <div class="line">
+                                <label for="Age">Income:</label>
+                                <input type="text" class="input" placeholder="Enter your income" id="Income">
+                            </div>
+                        </div>
+
+                        <div class="box">
+                            <h1>Income Stability</h1>
+                            <div class="line">
+                                <label for="stability" class="radio">how is your income stability?</label>
+                                <div class="radio-box">
+                                    <input type="radio" class="radio-circle" id="stability" name="stability">
+                                    <label class="radio" for="stability">Low</label>
+                                    <input type="radio" class="radio-circle" id="stability" name="stability">
+                                    <label class="radio" for="stability">High</label>
+                                </div>
+                            </div>
+                            <div class="line">
+                                <label for="Age">Profession:</label>
+                                <input type="text" class="input" placeholder="Enter your Profession" id="Profession">
+                            </div>
+                            <div class="line">
+                                <label for="Age">Profession:</label>
+                                <input type="text" class="input" placeholder="Enter your Profession" id="Profession">
+                            </div>
+                        </div>
+                        
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <!-- <div class="text">
+                <h1>YOUR SCORE</h1>
+                <h1 class="score">0000</h1>
+            </div> -->
+        </div>
+    </div>
+</body>
+</html>
