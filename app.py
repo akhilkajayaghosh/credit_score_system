@@ -19,11 +19,16 @@ def page4():
 @app.route('/submit', methods=['GET','POST'])
 def submit():
     if request.method=="POST":
-        accounts = request.form.get('acc')
-        education = request.form.get('Edu')
-        employ=request.form.get('emp')
-        # credit_score = (payment_history * 0.35) + (credit_utilization_ratio*0.30)+(accounts*0.15)+(education*0.10)+(employ* 0.10)
-        return (f"Accounts: {accounts}, Education: {education},Employment:{employ}")
+        accounts =float(request.form.get('acc'))
+        education = float(request.form.get('edu'))
+        employ=float(request.form.get('employment'))
+        payhis=float(request.form.get('his'))
+        balance=float(request.form.get('bal'))
+        lim=float(request.form.get('limit'))
+        credit_utilization_ratio=balance/lim
+        credit_score = (payhis*0.35)+(credit_utilization_ratio*0.30)+(accounts*0.15)+(education*0.10)+(employ* 0.10)
+        # return (f"Credit Score: {credit_score}")
+        return render_template('page2.html', value=credit_score)
 # Define other routes and backend logic as needed
 
 if __name__ == '__main__':
